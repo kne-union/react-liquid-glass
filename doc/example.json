@@ -1,0 +1,28 @@
+{
+  "isFull": false,
+  "list": [
+    {
+      "title": "这里填写示例标题",
+      "description": "这里填写示例说明",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "_ReactLiquidGlass",
+          "packageName": "@kne/current-lib_react-liquid-glass",
+          "importStatement": "import * as _ReactLiquidGlass from \"@kne/react-liquid-glass\""
+        },
+        {
+          "packageName": "@kne/current-lib_react-liquid-glass/dist/index.css"
+        },
+        {
+          "name": "bgImage",
+          "packageName": "./doc/bg.jpeg"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        }
+      ]
+    }
+  ]
+}
