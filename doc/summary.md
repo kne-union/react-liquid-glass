@@ -6,3 +6,14 @@
 - 液态玻璃动态效果渲染
 - 响应式设计，适配不同屏幕尺寸
 - 可配置的参数化效果控制
+
+***
+
+#### 注意
+
+* 需要同时引入样式文件
+
+```js
+import LiquidGlass from '@kne/react-liquid-glass';
+import '@kne/react-liquid-glass/dist/index.css';
+```
