@@ -4,7 +4,7 @@ import useResize from '@kne/use-resize';
 import classnames from 'classnames';
 import style from './style.module.scss';
 
-const ReactLiquidGlass = ({ className, children, dpi = 1.2, scale = 1, blur = 0.25, contrast = 1.2, brightness = 1.05, saturate = 1.1, ...props }) => {
+const ReactLiquidGlass = ({ className, children, responsiveBorder = true, dpi = 1.2, scale = 1, blur = 0.25, contrast = 1.2, brightness = 1.05, saturate = 1.1, ...props }) => {
   const id = useId().replace(/[#:]/g, '-');
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
   const [size, setSize] = useState(null);
@@ -131,22 +131,26 @@ const ReactLiquidGlass = ({ className, children, dpi = 1.2, scale = 1, blur = 0.
         onMouseMove={handlerBoardChange}
         onTouchStart={handlerBoardChange}
       >
-        <div
-          className={style['glass']}
-          style={{
-            opacity: 0.2,
-            mixBlendMode: 'screen',
-            background: linearGradient(0.12, 0.4)
-          }}
-        />
-        <div
-          className={style['glass']}
-          style={{
-            opacity: 0.8,
-            mixBlendMode: 'overlay',
-            background: linearGradient(0.32, 0.6)
-          }}
-        />
+        {responsiveBorder && (
+          <>
+            <div
+              className={style['glass']}
+              style={{
+                opacity: 0.2,
+                mixBlendMode: 'screen',
+                background: linearGradient(0.12, 0.4)
+              }}
+            />
+            <div
+              className={style['glass']}
+              style={{
+                opacity: 0.8,
+                mixBlendMode: 'overlay',
+                background: linearGradient(0.32, 0.6)
+              }}
+            />
+          </>
+        )}
         {children}
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" className={style['filter-svg']}>

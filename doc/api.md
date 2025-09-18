@@ -2,6 +2,7 @@
 |------|------|--------|------|
 | className | string | 无 | 自定义类名 |
 | children | ReactNode | 无 | 子组件 |
+| responsiveBorder | boolean | true | 是否启用响应式边框效果 |
 | dpi | number | 1.2 | 分辨率比例 |
 | scale | number | 1 | 缩放比例 |
 | blur | number | 0.25 | 模糊效果强度 |
